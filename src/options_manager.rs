@@ -99,7 +99,7 @@ pub struct OptionsManager {
     options: Vec<Option>,
     present_options: Vec<Option>,
 }
-
+#[warn(dead_code)]
 /// `OptionsManager` implementation.
 impl OptionsManager {
     /// Instantiates a new `OptionsManager` instance.

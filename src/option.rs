@@ -53,9 +53,9 @@
 //!
 //! Please feel free to report issues or submit pull requests to improve this code.
 //!
-
-/// The Option struct represents a command line option.
+#[warn(dead_code)]
 #[derive(Clone)]
+/// The Option struct represents a command line option.
 pub struct Option {
     /// The short name of the option, e.g., "h" for "-h".
     pub short_name: String,
