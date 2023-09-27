@@ -30,7 +30,7 @@ To use R-CLIP in your Rust project, add it as a dependency in your `Cargo.toml` 
 
 ```toml
 [dependencies]
-rclip = "0.0.1"
+rclip-cmd = "0.0.1"
 ```
 
 ### Importing R-CLIP <a name="importing-r-clip"></a>
@@ -38,8 +38,8 @@ rclip = "0.0.1"
 In your Rust code, import R-CLIP as follows:
 
 ```rust
-extern crate rclip;
-use rclip::{Option, OptionsManager};
+extern crate rclip-cmd;
+use rclip-cmd::{Option, OptionsManager};
 ```
 
 ## 3. Defining Command-Line Options <a name="defining-command-line-options"></a>
@@ -99,7 +99,7 @@ if options_result.is_ok() {
 Here's an example of using R-CLIP to define and parse command-line options in Rust:
 
 ```rust
-extern crate rclip;
+extern crate rclip-cmd;
 use rclip::{Option, OptionsManager};
 
 fn main() {
