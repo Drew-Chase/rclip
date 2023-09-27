@@ -1,6 +1,6 @@
 [package]
 name = "rclip-cmd"
-version = "0.0.3"
+version = "0.0.1"
 edition = "2021"
 authors=["Drew Chase"]
 categories= ["cli", "parser"]
