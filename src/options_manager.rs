@@ -89,7 +89,7 @@
 //!
 //! Please feel free to report issues or submit pull requests to improve this code.
 //!
-#![doc(html_root_url = "https://docs.rs/rclip-cmd/0.0.2")]
+#![doc(html_root_url = "https://docs.rs/rclip-cmd")]
 
 use std::collections::HashSet;
 use crate::option::Option;
