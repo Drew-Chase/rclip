@@ -4,9 +4,13 @@ version = "0.0.1"
 edition = "2021"
 authors=["Drew Chase"]
 categories= ["cli", "parser"]
-license="GNU-3.0"
+license="GPL-3"
 repository="https://github.com/drew-chase/rclip"
 readme="readme.md"
 documentation="https://docs.rs/rclip"
+description="A command line interface parser for rust"
+keywords=["cli", "parser", "rclip", "clip", "command"]
+license-file="LICENSE"
+
 
 [dependencies]
