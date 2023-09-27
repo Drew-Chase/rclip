@@ -1,13 +1,13 @@
 [package]
 name = "rclip-cmd"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 authors=["Drew Chase"]
 categories= ["cli", "parser"]
 license="GPL-3.0-only"
 repository="https://github.com/drew-chase/rclip"
 readme="readme.md"
-documentation="https://docs.rs/rclip"
+documentation="https://docs.rs/rclip-cmd"
 description="A command line interface parser for rust"
 keywords=["cli", "parser", "rclip", "clip", "command"]
 license-file="LICENSE"
