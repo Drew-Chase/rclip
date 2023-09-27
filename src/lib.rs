@@ -18,15 +18,15 @@ mod tests {
         let options_result = options_manager.parse_options(vec!["-h".to_string(), "-o".to_string(), "output.txt".to_string()]);
 
         if options_result.is_ok() {
-            for option in options_result.unwrap() {
-                if option.has_argument {
-                    println!("Option: --{}, Argument: {}", option.long_name, options_manager.argument(option.short_name.as_str()));
-                } else {
-                    println!("Option: {}", option.to_string());
-                }
+            if options_manager.is_present("h") {
+                println!("Help is present");
+            }
+            if options_manager.is_present("o") {
+                println!("Output file: {}", options_manager.argument("o").unwrap());
             }
         } else {
             println!("Error: {}", options_result.err().unwrap());
+            options_manager.print_help();
         }
     }
 }
