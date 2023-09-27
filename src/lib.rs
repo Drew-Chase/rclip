@@ -1,5 +1,5 @@
-mod option;
-mod options_manager;
+pub mod option;
+pub mod options_manager;
 
 #[cfg(test)]
 #[warn(dead_code)]
