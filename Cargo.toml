@@ -2,7 +2,10 @@
 name = "rclip"
 version = "0.0.1"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors=["Drew Chase"]
+categories= ["cli", "parser"]
+license="GNU-3.0"
+repository="https://github.com/drew-chase/rclip"
+readme="readme.md"
 
 [dependencies]
