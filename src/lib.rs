@@ -1,14 +1,32 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+mod option;
+mod options_manager;
 
 #[cfg(test)]
+#[warn(dead_code)]
 mod tests {
-    use super::*;
+    use crate::options_manager::OptionsManager;
+    use crate::option::Option;
 
     #[test]
     fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+        let test_options: Vec<Option> = vec![
+            Option::new("v".to_string(), "version".to_string(), false, false, "Prints version information".to_string()),
+            Option::new("f".to_string(), "file".to_string(), true, true, "The file to read".to_string()),
+            Option::new("o".to_string(), "output".to_string(), false, true, "The file to write to".to_string()),
+        ];
+        let mut options_manager = OptionsManager::new("R-CLIP (Rust Command Line Interface Parser)", test_options);
+        let options_result = options_manager.parse_options(vec!["-h".to_string(), "-o".to_string(), "output.txt".to_string()]);
+
+        if options_result.is_ok() {
+            for option in options_result.unwrap() {
+                if option.has_argument {
+                    println!("Option: --{}, Argument: {}", option.long_name, options_manager.argument(option.short_name.as_str()));
+                } else {
+                    println!("Option: {}", option.to_string());
+                }
+            }
+        } else {
+            println!("Error: {}", options_result.err().unwrap());
+        }
     }
 }
