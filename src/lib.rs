@@ -22,7 +22,7 @@ mod tests {
                 println!("Help is present");
             }
             if options_manager.is_present("o") {
-                println!("Output file: {}", options_manager.argument("o").unwrap());
+                println!("Output file: {}", options_manager.argument("o"));
             }
         } else {
             println!("Error: {}", options_result.err().unwrap());
